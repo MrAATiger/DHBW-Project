@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.pingu.dhbw_project.MainActivity"
+    android:background= "#3A546F">
+
+    <TextView
+        android:id="@+id/koerpergroesse"
+        android:layout_marginTop="53dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Körpergröße"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="40dp"
+        />
+
+    <TextView
+            android:layout_marginTop="110dp"
+            android:id="@+id/koerpergewicht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gewicht"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="40dp"
+            />
+    <View
+        android:layout_width="600dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="160dp"
+        android:background="#3A617E" />
+
+    <View
+        android:layout_width="600dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="350dp"
+        android:background="#3A617E" />
+
+    <EditText
+        android:id="@+id/editKoerpergewicht"
+        android:maxLength="3"
+        android:inputType="number"
+        android:textSize="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="170dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_alignLeft="@+id/koerpergewicht"
+        android:hint="kg"
+        android:textColorHint="#3A546F"
+        android:background="#3A617E" />
+
+
+    <EditText
+        android:id="@+id/editKoerpergroesse"
+        android:maxLength="3"
+        android:inputType="number"
+        android:textSize="20dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft="170dp"
+        android:layout_width="60dp"
+        android:layout_alignLeft="@id/koerpergroesse"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:hint="cm"
+        android:textColorHint="#3A546F"
+        android:background="#3A617E"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonMan"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="197dp"
+        app:srcCompat="@drawable/man"
+        android:background="#3A546F"/>
+
+    <ImageButton
+        android:id="@+id/buttonWomen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="203dp"
+        app:srcCompat="@drawable/woman_new"
+        android:background="#3A546F"/>
+
+    <ImageButton
+        android:id="@+id/buttonHelp"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:background="#3A546F"
+        app:srcCompat="@drawable/help__2"
+        android:layout_alignTop="@+id/buttonBerechnen"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:id="@+id/buttonBerechnen"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berechnen"
+        android:background="#3A617E"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="50dp"/>
+
+
+    <!-- end of code -->
+</RelativeLayout>
+
+

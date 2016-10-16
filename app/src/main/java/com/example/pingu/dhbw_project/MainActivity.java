@@ -1,42 +1,33 @@
 package com.example.pingu.dhbw_project;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.media.Image;
-import android.support.annotation.DrawableRes;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends Activity  {
+public class MainActivity extends Activity {
 
     // LOGGER
     private static final String TAG = "MainActivity";
 
-    private     double normalgewicht;
-    private     double koerpergroesse;
-    private     double idealgewicht;
+    private double normalgewicht;
+    private double koerpergroesse;
+    private double idealgewicht;
 
 
-    protected   ImageButton buttonMan;
-    protected   ImageButton buttonWomen;
-    protected   ImageButton buttonHelp;
-    protected   Button buttonCalculate;
+    protected ImageButton buttonMan;
+    protected ImageButton buttonWomen;
+    protected ImageButton buttonHelp;
+    protected Button buttonCalculate;
 
     protected EditText height;
     protected EditText weight;
 
     private boolean male;
-
-    Intent intent = new Intent(this, ResultActivity.class);
 
 
     @Override
@@ -73,8 +64,7 @@ public class MainActivity extends Activity  {
             Toast toast = Toast.makeText(this,"Text",Toast.LENGTH_SHORT);
             toast.show();
             return;}*/
-        }
-
+    }
 
 
     // Berechnung des Normalgewichts
@@ -96,7 +86,10 @@ public class MainActivity extends Activity  {
     }
 
 
-
+    private void changeActiviti (){
+        Intent intent = new Intent(this, ResultActivity.class);
+        startActivity(intent);
+    }
 
     public class OnClickManListener implements View.OnClickListener {
 
@@ -126,7 +119,7 @@ public class MainActivity extends Activity  {
 
             Log.i(TAG, "try to calc");
 
-            if(height.getText().toString().isEmpty() || weight.getText().toString().isEmpty()){
+            if (height.getText().toString().isEmpty() /*|| weight.getText().toString().isEmpty()*/) {
                 Log.i(TAG, "there is no input");
                 return;
             }
@@ -134,31 +127,30 @@ public class MainActivity extends Activity  {
             koerpergroesse = (double) Integer.parseInt(height.getText().toString());
 
 
-
             normalgewicht();
             Log.i(TAG, "normalgewicht: " + normalgewicht);
-            if(male){
+            if (male) {
                 idealgewichtMann();
             } else {
                 idealgewichtFrau();
             }
             Log.i(TAG, "Idealgewicht: " + idealgewicht);
 
-           startActivity(intent);
             // TODO mit weight
 
 
             // TODO change to result view
+            changeActiviti();
 
         }
     }
 
-            public class OnHelpListener implements View.OnClickListener {
+    public class OnHelpListener implements View.OnClickListener {
 
-                @Override
-                public void onClick(View v) {
-                    Log.i(TAG, "Help");
-                }
-            }
+        @Override
+        public void onClick(View v) {
+            Log.i(TAG, "Help");
+        }
+    }
 
 } // end of class

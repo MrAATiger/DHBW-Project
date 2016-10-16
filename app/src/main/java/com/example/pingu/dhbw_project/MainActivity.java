@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
     }
 
 
-    private void changeActiviti (){
+    private void changeActiviti() {
         Intent intent = new Intent(this, ResultActivity.class);
         startActivity(intent);
     }

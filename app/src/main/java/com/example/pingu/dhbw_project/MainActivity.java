@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
     }
 
 
-    private void changeActiviti() {
+    private void changeActivity() {
         Intent intent = new Intent(this, ResultActivity.class);
         startActivity(intent);
     }
@@ -140,7 +140,7 @@ public class MainActivity extends Activity {
 
 
             // TODO change to result view
-            changeActiviti();
+            changeActivity();
 
         }
     }

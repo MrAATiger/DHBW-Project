@@ -18,10 +18,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/result_background"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:background="#3A546F"
+        android:background="@drawable/result_background"
         android:id="@+id/imageView" />
 
     <TextView

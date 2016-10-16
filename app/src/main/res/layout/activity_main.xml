@@ -79,28 +79,17 @@
 
     <ImageButton
         android:id="@+id/buttonMan"
-        android:layout_width="100dp"
         android:layout_height="110dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="197dp"
-        app:srcCompat="@drawable/man"
-        android:background="#3A546F"/>
-
-    <ImageButton
-        android:id="@+id/buttonWomen"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="203dp"
-        app:srcCompat="@drawable/woman_new"
-        android:background="#3A546F"/>
+        android:background="@drawable/man"
+        android:layout_width="110dp" />
 
     <ImageButton
         android:id="@+id/buttonHelp"
         android:layout_height="70dp"
         android:layout_width="70dp"
-        android:background="#3A546F"
-        app:srcCompat="@drawable/help__2"
+        android:background="@drawable/help__2"
         android:layout_alignTop="@+id/buttonBerechnen"
         android:layout_alignParentEnd="true" />
 
@@ -115,6 +104,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="140dp"
         android:layout_marginBottom="50dp"/>
+
+    <ImageButton
+        android:id="@+id/buttonWomen"
+        android:layout_width="135dp"
+        android:layout_marginLeft="220dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/buttonMan"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/woman_new" />
 
 
     <!-- end of code -->

@@ -88,6 +88,7 @@ public class MainActivity extends Activity {
 
     private void changeActivity() {
         Intent intent = new Intent(this, ResultActivity.class);
+        intent.putExtra("normalgewicht",normalgewicht);
         startActivity(intent);
     }
 
@@ -136,10 +137,7 @@ public class MainActivity extends Activity {
             }
             Log.i(TAG, "Idealgewicht: " + idealgewicht);
 
-            // TODO mit weight
 
-
-            // TODO change to result view
             changeActivity();
 
         }

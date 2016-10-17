@@ -1,6 +1,7 @@
 package com.example.pingu.dhbw_project;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -108,6 +110,15 @@ public class MainActivity extends Activity {
 
             koerpergroesse = (double) Integer.parseInt(height.getText().toString());
 
+            if (koerpergroesse <145 || koerpergroesse > 230) {
+                Context context = getApplicationContext();
+                CharSequence text = "Bitte gebe eine Zahl zwischen 145 und 230 ein!";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                return;
+            }
             normalgewicht = koerpergroesse - 100;
 
             Log.i(TAG, "normalgewicht: " + normalgewicht);

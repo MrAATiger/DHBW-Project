@@ -14,9 +14,9 @@ public class MainActivity extends Activity {
     // LOGGER
     private static final String TAG = "MainActivity";
 
-    private double normalgewicht;
-    private double koerpergroesse;
-    private double idealgewicht;
+    protected double normalgewicht;
+    protected double koerpergroesse;
+    protected double idealgewicht;
 
 
     protected ImageButton buttonMan;
@@ -53,42 +53,23 @@ public class MainActivity extends Activity {
         buttonCalculate.setOnClickListener(new OnCalculateListener());
         buttonHelp.setOnClickListener(new OnHelpListener());
 
-
         // init vars
         height.setText("");
 
-
-
         /* funktioniert nicht - prüfen
-        if (koerpergroesse > 225 || koerpergroesse < 150) {
+             if (koerpergroesse > 225 || koerpergroesse < 150) {
             Toast toast = Toast.makeText(this,"Text",Toast.LENGTH_SHORT);
             toast.show();
             return;}*/
-    }
 
 
-    // Berechnung des Normalgewichts
-    private double normalgewicht() {
-        normalgewicht = koerpergroesse - 100;
-        return normalgewicht;
-    }
-
-    // Idealgewicht Mann
-    private double idealgewichtMann() {
-        idealgewicht = normalgewicht() * 0.9;
-        return idealgewicht;
-    }
-
-    // Idealgewicht Frau
-    private double idealgewichtFrau() {
-        idealgewicht = normalgewicht() * 0.85;
-        return idealgewicht;
     }
 
 
     private void changeActivity() {
         Intent intent = new Intent(this, ResultActivity.class);
-        intent.putExtra("normalgewicht",normalgewicht);
+        intent.putExtra("normalgewicht",""+this.normalgewicht);
+        intent.putExtra("idealgewicht",""+this.idealgewicht);
         startActivity(intent);
     }
 
@@ -127,13 +108,13 @@ public class MainActivity extends Activity {
 
             koerpergroesse = (double) Integer.parseInt(height.getText().toString());
 
+            normalgewicht = koerpergroesse - 100;
 
-            normalgewicht();
             Log.i(TAG, "normalgewicht: " + normalgewicht);
             if (male) {
-                idealgewichtMann();
+                idealgewicht = normalgewicht * 0.9;
             } else {
-                idealgewichtFrau();
+                idealgewicht = normalgewicht * 0.85;
             }
             Log.i(TAG, "Idealgewicht: " + idealgewicht);
 

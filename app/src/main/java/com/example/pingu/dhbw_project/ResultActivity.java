@@ -16,10 +16,15 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         normalgewicht = (TextView) findViewById(R.id.resultWeight);
 
+        idealgewicht = (TextView) findViewById(R.id.resultIdealWeight) ;
+
+
         Intent intent = getIntent();
         String ergebnis = intent.getStringExtra("normalgewicht");
+        String idealErgebnis = intent.getStringExtra("idealgewicht");
+        normalgewicht.setText(ergebnis);
+        idealgewicht.setText(idealErgebnis);
 
-       normalgewicht.setText(ergebnis);
 
 
     }

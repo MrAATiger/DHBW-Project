@@ -22,6 +22,18 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content" />
 
+    <View
+        android:layout_width="600dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="110dp"
+        android:background="#3A617E" />
+
+    <View
+        android:layout_width="600dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="380dp"
+        android:background="#3A617E" />
+
     <TextView
         android:id="@+id/resultIdealWeight"
         android:text="Test"
@@ -30,8 +42,8 @@
         android:layout_height="wrap_content"
         android:textSize="8dp"
         android:textColor="#76662C"
-        android:layout_marginTop="275dp"
-        android:layout_marginLeft="185dp"/>
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="175dp"/>
 
     <TextView
         android:text="result"
@@ -40,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="205dp"
-        android:layout_marginLeft="125dp"
+        android:layout_marginLeft="150dp"
         android:textColor="#76662C"
         android:id="@+id/resultWeight"
         />
@@ -52,7 +64,7 @@
         android:textSize="10dp"
         android:id="@+id/textNormalWeight"
         android:layout_marginTop="190dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="123dp"
          />
 
     <TextView
@@ -61,8 +73,8 @@
         android:layout_height="wrap_content"
         android:textSize="10dp"
         android:id="@+id/textView4"
-        android:layout_marginTop="262dp"
-        android:layout_marginLeft="185dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginLeft="175dp"
          />
 
 

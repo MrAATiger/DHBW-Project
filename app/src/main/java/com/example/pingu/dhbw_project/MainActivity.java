@@ -119,13 +119,13 @@ public class MainActivity extends Activity {
                 toast.show();
                 return;
             }
-            normalgewicht = koerpergroesse - 100;
+            normalgewicht = (int)koerpergroesse - 100;
 
             Log.i(TAG, "normalgewicht: " + normalgewicht);
             if (male) {
-                idealgewicht = normalgewicht * 0.9;
+                idealgewicht = (int)(normalgewicht * 0.9);
             } else {
-                idealgewicht = normalgewicht * 0.85;
+                idealgewicht = (int)(normalgewicht * 0.85);
             }
             Log.i(TAG, "Idealgewicht: " + idealgewicht);
 

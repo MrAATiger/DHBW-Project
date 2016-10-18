@@ -16,7 +16,7 @@
 
 <!--end of code -->
     <ImageView
-        android:layout_height="900dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/result_background"
         android:id="@+id/imageView"

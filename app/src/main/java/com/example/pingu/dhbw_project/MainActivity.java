@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
 
     private boolean male;
 
+    protected Intent berechnen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,21 +60,17 @@ public class MainActivity extends Activity {
         // init vars
         height.setText("");
 
-        /* funktioniert nicht - prüfen
-             if (koerpergroesse > 225 || koerpergroesse < 150) {
-            Toast toast = Toast.makeText(this,"Text",Toast.LENGTH_SHORT);
-            toast.show();
-            return;}*/
-
-
     }
-
+private void changeToHelp () {
+    Intent help = new Intent(this, help_Activity.class);
+    startActivity(help);
+}
 
     private void changeActivity() {
-        Intent intent = new Intent(this, ResultActivity.class);
-        intent.putExtra("normalgewicht",""+this.normalgewicht);
-        intent.putExtra("idealgewicht",""+this.idealgewicht);
-        startActivity(intent);
+        berechnen = new Intent(this, ResultActivity.class);
+        berechnen.putExtra("normalgewicht",""+this.normalgewicht);
+        berechnen.putExtra("idealgewicht",""+this.idealgewicht);
+        startActivity(berechnen);
     }
 
     public class OnClickManListener implements View.OnClickListener {
@@ -92,6 +90,7 @@ public class MainActivity extends Activity {
             male = false;
             Log.i(TAG, "now is female");
             // TODO run female active animation
+
 
         }
     }
@@ -140,6 +139,8 @@ public class MainActivity extends Activity {
         @Override
         public void onClick(View v) {
             Log.i(TAG, "Help");
+            changeToHelp();
+
         }
     }
 

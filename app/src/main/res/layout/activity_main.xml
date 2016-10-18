@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/koerpergroesse"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="60dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Körpergröße"
@@ -42,7 +42,7 @@
         android:maxLength="3"
         android:inputType="number"
         android:textSize="20dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="170dp"
         android:layout_width="60dp"
         android:layout_alignLeft="@id/koerpergroesse"

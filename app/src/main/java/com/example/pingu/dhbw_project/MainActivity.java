@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,8 +33,7 @@ public class MainActivity extends Activity {
 
     protected ImageView startMan;
     protected ImageView startWoman;
-    protected ImageView endMan;
-    protected ImageView endWoman;
+
 
     protected ImageButton buttonMan;
     protected ImageButton buttonWomen;
@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
 
     protected EditText height;
     protected EditText weight;
+    protected boolean prüfen;
 
     private boolean male;
 
@@ -142,10 +143,17 @@ public class MainActivity extends Activity {
         @Override
         public void onClick(View v) {
             male = true;
-            Log.i(TAG, "now is male");
-            AnimationDrawable frameMan =(AnimationDrawable) startMan.getBackground();
-            buttonMan.setVisibility(View.INVISIBLE);
-            frameMan.start();
+
+                Log.i(TAG, "now is male");
+                AnimationDrawable frameMan =(AnimationDrawable) startMan.getBackground();
+                buttonMan.setVisibility(View.INVISIBLE);
+                frameMan.start();
+
+                buttonWomen.setBackgroundResource(R.drawable.woman_new);
+
+
+
+
 
 
         }
@@ -159,7 +167,7 @@ public class MainActivity extends Activity {
             Log.i(TAG, "now is female");
             ((AnimationDrawable)startWoman.getBackground()).start();
             buttonWomen.setVisibility(View.INVISIBLE);
-            Log.i(TAG,"blubb");
+            buttonMan.setBackgroundResource(R.drawable.man);
 
 
         }

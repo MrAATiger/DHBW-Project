@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -29,6 +31,10 @@ public class MainActivity extends Activity {
     protected double idealgewicht;
 
     protected ImageView startMan;
+    protected ImageView startWoman;
+    protected ImageView endMan;
+    protected ImageView endWoman;
+
     protected ImageButton buttonMan;
     protected ImageButton buttonWomen;
     protected ImageButton buttonHelp;
@@ -50,7 +56,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // init View
         setContentView(R.layout.activity_main);
 
@@ -58,7 +63,10 @@ public class MainActivity extends Activity {
         buttonMan = (ImageButton) findViewById(R.id.buttonMan);
         buttonWomen = (ImageButton) findViewById(R.id.buttonWomen);
         buttonHelp = (ImageButton) findViewById(R.id.buttonHelp);
+
         startMan = (ImageView) findViewById(R.id.buttonManStart);
+        startMan.setBackgroundResource(R.drawable.manstartbutton);
+        startWoman=(ImageView) findViewById(R.id.buttonWomenStart);
 
         buttonCalculate = (Button) findViewById(R.id.buttonBerechnen);
 
@@ -78,6 +86,8 @@ public class MainActivity extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+
 
     private void changeToHelp() {
         Intent help = new Intent(this, help_Activity.class);
@@ -133,8 +143,11 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
             male = true;
             Log.i(TAG, "now is male");
-            // TODO run male active animation
-            ((AnimationDrawable)startMan.getBackground()).start();
+            AnimationDrawable frameMan =(AnimationDrawable) startMan.getBackground();
+            buttonMan.setVisibility(View.INVISIBLE);
+            frameMan.start();
+
+
         }
     }
 
@@ -144,7 +157,9 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
             male = false;
             Log.i(TAG, "now is female");
-            // TODO run female active animation
+            ((AnimationDrawable)startWoman.getBackground()).start();
+            buttonWomen.setVisibility(View.INVISIBLE);
+            Log.i(TAG,"blubb");
 
 
         }

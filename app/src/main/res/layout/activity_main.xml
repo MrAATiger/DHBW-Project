@@ -62,6 +62,15 @@
         android:background="@drawable/man"
         />
 
+    <ImageView
+        android:id="@+id/buttonManStart"
+        android:layout_height="120dp"
+        android:layout_width="150dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/manstartbutton"
+        />
+
 
     <Button
         android:id="@+id/buttonBerechnen"

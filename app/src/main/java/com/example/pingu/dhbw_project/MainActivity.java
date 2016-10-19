@@ -149,10 +149,6 @@ public class MainActivity extends Activity {
                 buttonMan.setVisibility(View.INVISIBLE);
                 frameMan.start();
 
-                buttonWomen.setBackgroundResource(R.drawable.woman_new);
-
-
-
 
 
 
@@ -167,7 +163,8 @@ public class MainActivity extends Activity {
             Log.i(TAG, "now is female");
             ((AnimationDrawable)startWoman.getBackground()).start();
             buttonWomen.setVisibility(View.INVISIBLE);
-            buttonMan.setBackgroundResource(R.drawable.man);
+
+
 
 
         }

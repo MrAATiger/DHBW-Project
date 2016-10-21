@@ -54,26 +54,6 @@
         />
 
 
-
-    <ImageView
-        android:id="@+id/buttonManStart"
-        android:layout_height="120dp"
-        android:layout_width="150dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="180dp"
-        android:background="@drawable/manstartbutton"
-        />
-
-    <ImageView
-        android:id="@+id/buttonWomenStart"
-        android:layout_width="125dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="185dp"
-        android:layout_marginTop="190dp"
-        android:background="@drawable/womenstartbutton"
-        />
-
-
     <Button
         android:id="@+id/buttonBerechnen"
         android:textColor="#FFFFFF"
@@ -92,7 +72,7 @@
         android:layout_width="150dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="180dp"
-        android:background="@drawable/man" />
+        android:background="@drawable/man_selector" />
 
 
     <ImageButton
@@ -101,7 +81,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="185dp"
         android:layout_marginTop="190dp"
-        android:background="@drawable/woman_new" />
+        android:background="@drawable/woman_selector" />
 
     <ImageButton
         android:id="@+id/buttonHelp"
@@ -110,7 +90,6 @@
         android:background="@drawable/help__2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
-
 
     <!-- end of code -->
 </RelativeLayout>

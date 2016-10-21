@@ -3,7 +3,6 @@ package com.example.pingu.dhbw_project;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -27,10 +25,6 @@ public class MainActivity extends Activity {
     protected double normalgewicht;
     protected double koerpergroesse;
     protected double idealgewicht;
-
-    protected ImageView startMan;
-    protected ImageView startWoman;
-
 
     protected ImageButton buttonMan;
     protected ImageButton buttonWomen;
@@ -62,10 +56,6 @@ public class MainActivity extends Activity {
         buttonWomen = (ImageButton) findViewById(R.id.buttonWomen);
         buttonHelp = (ImageButton) findViewById(R.id.buttonHelp);
 
-        startMan = (ImageView) findViewById(R.id.buttonManStart);
-        startMan.setBackgroundResource(R.drawable.manstartbutton);
-        startWoman=(ImageView) findViewById(R.id.buttonWomenStart);
-
         buttonCalculate = (Button) findViewById(R.id.buttonBerechnen);
 
         height = (EditText) findViewById(R.id.editKoerpergroesse);
@@ -83,8 +73,9 @@ public class MainActivity extends Activity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
 
+        buttonMan.setActivated(true);
+    }
 
 
     private void changeToHelp() {
@@ -141,11 +132,9 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
             male = true;
 
-                Log.i(TAG, "now is male");
-
-
-
-
+            Log.i(TAG, "now is male");
+            buttonMan.setActivated(true);
+            buttonWomen.setActivated(false);
 
         }
     }
@@ -157,9 +146,8 @@ public class MainActivity extends Activity {
             male = false;
             Log.i(TAG, "now is female");
 
-
-
-
+            buttonMan.setActivated(false);
+            buttonWomen.setActivated(true);
 
         }
     }

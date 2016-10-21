@@ -145,9 +145,7 @@ public class MainActivity extends Activity {
             male = true;
 
                 Log.i(TAG, "now is male");
-                AnimationDrawable frameMan =(AnimationDrawable) startMan.getBackground();
-                buttonMan.setVisibility(View.INVISIBLE);
-                frameMan.start();
+
 
 
 
@@ -161,8 +159,7 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
             male = false;
             Log.i(TAG, "now is female");
-            ((AnimationDrawable)startWoman.getBackground()).start();
-            buttonWomen.setVisibility(View.INVISIBLE);
+
 
 
 

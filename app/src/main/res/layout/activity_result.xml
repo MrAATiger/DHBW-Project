@@ -98,6 +98,16 @@
         android:layout_marginLeft="190dp"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zurück"
+        android:id="@+id/zurueck"
+        android:background="#3A617E"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
 
 
 </RelativeLayout>

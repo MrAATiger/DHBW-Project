@@ -84,6 +84,7 @@ public class MainActivity extends Activity {
 
     private void changeActivity() {
         berechnen = new Intent(this, ResultActivity.class);
+        berechnen.putExtra("koerpergroesseEingabe", "" + this.koerpergroesse);
         berechnen.putExtra("normalgewicht", "" + this.normalgewicht);
         berechnen.putExtra("idealgewicht", "" + this.idealgewicht);
         startActivity(berechnen);
@@ -166,10 +167,11 @@ public class MainActivity extends Activity {
             koerpergroesse = (double) Integer.parseInt(height.getText().toString());
 
             if (koerpergroesse < 145 || koerpergroesse > 230) {
-                // Fehler abfangen und Toaster anzeigen
+                //fängt fehler ab und zeigt Toaster
                 Context context = getApplicationContext();
                 CharSequence text = "Bitte gebe eine Zahl zwischen 145 und 230 ein!";
                 int duration = Toast.LENGTH_SHORT;
+
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
                 return;

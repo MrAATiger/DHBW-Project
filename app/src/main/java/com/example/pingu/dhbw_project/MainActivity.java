@@ -32,8 +32,7 @@ public class MainActivity extends Activity {
     protected Button buttonCalculate;
 
     protected EditText height;
-    protected EditText weight;
-    protected boolean prüfen;
+    
 
     private boolean male;
 
@@ -167,10 +166,10 @@ public class MainActivity extends Activity {
             koerpergroesse = (double) Integer.parseInt(height.getText().toString());
 
             if (koerpergroesse < 145 || koerpergroesse > 230) {
+                // Fehler abfangen und Toaster anzeigen
                 Context context = getApplicationContext();
                 CharSequence text = "Bitte gebe eine Zahl zwischen 145 und 230 ein!";
                 int duration = Toast.LENGTH_SHORT;
-
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
                 return;

@@ -3,6 +3,7 @@ package com.example.pingu.dhbw_project;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,7 +33,7 @@ public class MainActivity extends Activity {
     protected Button buttonCalculate;
 
     protected EditText height;
-    
+    protected  ImageButton refresh;
 
     private boolean male;
 
@@ -54,11 +55,11 @@ public class MainActivity extends Activity {
         buttonMan = (ImageButton) findViewById(R.id.buttonMan);
         buttonWomen = (ImageButton) findViewById(R.id.buttonWomen);
         buttonHelp = (ImageButton) findViewById(R.id.buttonHelp);
-
+        refresh = (ImageButton) findViewById(R.id.refreshButton);
         buttonCalculate = (Button) findViewById(R.id.buttonBerechnen);
 
         height = (EditText) findViewById(R.id.editKoerpergroesse);
-
+        refresh.setOnClickListener(new RefreshListener());
 
         // attach listener
         buttonMan.setOnClickListener(new OnClickManListener());
@@ -124,6 +125,13 @@ public class MainActivity extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+
+    public void refresh () {
+        buttonMan.setActivated(true);
+        buttonWomen.setActivated(false);
+        male =true;
+        height.setText("");
     }
 
     public class OnClickManListener implements View.OnClickListener {
@@ -199,6 +207,14 @@ public class MainActivity extends Activity {
             Log.i(TAG, "Help");
             changeToHelp();
 
+        }
+    }
+
+    public class RefreshListener implements  View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            refresh();
         }
     }
 

@@ -43,7 +43,7 @@
         android:textSize="11dp"
         android:textColor="#76662C"
         android:layout_marginTop="155dp"
-        android:layout_marginLeft="175dp"/>
+        android:layout_marginLeft="155dp"/>
 
     <TextView
         android:text="result"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="205dp"
-        android:layout_marginLeft="147dp"
+        android:layout_marginLeft="127dp"
         android:textColor="#76662C"
         android:id="@+id/resultWeight"
         />
@@ -64,7 +64,7 @@
         android:textSize="11dp"
         android:id="@+id/textNormalWeight"
         android:layout_marginTop="190dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="100dp"
          />
 
     <TextView
@@ -74,7 +74,7 @@
         android:textSize="11dp"
         android:id="@+id/textView4"
         android:layout_marginTop="140dp"
-        android:layout_marginLeft="175dp"
+        android:layout_marginLeft="155dp"
          />
 
 
@@ -84,7 +84,7 @@
         android:textSize="9dp"
         android:text="Körpergröße"
         android:layout_marginTop="245dp"
-        android:layout_marginLeft="178dp"
+        android:layout_marginLeft="158dp"
         />
 
 
@@ -95,7 +95,7 @@
         android:id="@+id/koerpergroesseEingabe"
         android:text="blubb"
         android:layout_marginTop="260dp"
-        android:layout_marginLeft="190dp"
+        android:layout_marginLeft="170dp"
         />
 
     <Button

@@ -24,7 +24,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="50dp"
-        android:text="Hallo lieber Nutzer,\ndie folgende App bitte dir die Möglichkeit dein Normal- und Idealgewicht zu berechnen."
+        android:text="Hallo lieber Nutzer,\ndie folgende App bietet dir die Möglichkeit dein Normal- und Idealgewicht zu berechnen."
         android:textColor="#FFFFFF"/>
 
     <TextView
@@ -35,7 +35,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="130dp"
         android:layout_marginRight="50dp"
-        android:text="Die Formel wurde von Pierre Paul Broca entwickelt und dient als Einschätzung für dein Gewicht.\n\nDabei musst du nur deine Körpergröße in den Rechner eingeben.\n\nDas Ergebnis berückstichtig wie der BMI nicht deinen Körperaufbau und sollte unter umständen nicht so ernst genommen werden."
+        android:text="Die Formel wurde von Pierre Paul Broca entwickelt und dient als Einschätzung für dein Gewicht.\n\nDabei musst du nur deine Körpergröße in den Rechner eingeben."
         android:textColor="#FFFFFF"/>
 
     <Button
